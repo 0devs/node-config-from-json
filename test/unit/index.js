@@ -6,8 +6,10 @@ var srcPath = '../../package';
 t.test('should require ./JsonPlugin', function (t) {
 
     var Plugin = proxyquire(srcPath + '/index', {
-        './JsonPlugin': function () {
-            t.end();
+        './JsonPlugin': {
+            default: function () {
+                t.end();
+            }
         }
     });
 

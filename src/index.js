@@ -1,1 +1,3 @@
-module.exports = require('./JsonPlugin');
+import JsonPlugin from './JsonPlugin';
+
+export default JsonPlugin;

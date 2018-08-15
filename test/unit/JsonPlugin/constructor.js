@@ -14,7 +14,7 @@ t.test('constructor', function (t) {
         var plugin = new Plugin();
 
         t.equal(plugin.type, 'receive');
-        t.equal(plugin.name, 'maf-config-from-json');
+        t.equal(plugin.name, '@0devs/config-from-json');
         t.same(plugin.Error, JsonPluginError);
 
         t.end();
@@ -28,7 +28,7 @@ t.test('constructor', function (t) {
         var plugin = new Plugin(logger);
 
         t.equal(plugin.type, 'receive');
-        t.equal(plugin.name, 'maf-config-from-json');
+        t.equal(plugin.name, '@0devs/config-from-json');
         t.same(plugin.Error, JsonPluginError);
 
         t.end();

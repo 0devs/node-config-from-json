@@ -1,8 +1,7 @@
-var JsonPluginError = require('./Error');
-
-var exists = require('./methods/exists');
-var read = require('./methods/read');
-var parse = require('./methods/parse');
+import JsonPluginError from './Error';
+import exists from './methods/exists';
+import read from './methods/read';
+import parse from './methods/parse';
 
 class FromJsonPlugin {
 
@@ -11,7 +10,7 @@ class FromJsonPlugin {
      */
     constructor (logger) {
         this.type = 'receive';
-        this.name = 'maf-config-from-json';
+        this.name = '@0devs/config-from-json';
 
         this.Error = JsonPluginError;
         this._logger = this._validateLogger(logger);
@@ -109,4 +108,4 @@ class FromJsonPlugin {
     }
 }
 
-module.exports = FromJsonPlugin;
+export default FromJsonPlugin;

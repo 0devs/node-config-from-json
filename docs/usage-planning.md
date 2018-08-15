@@ -2,13 +2,13 @@
 
 
 ```js
-var Config = require('maf-config');
+var Config = require('@0devs/config');
 
 
 var config = new Config();
 
 config
-    .use(require('maf-config-from-json'))
+    .use(require('@0devs/config-from-json'))
     .init()
     .then(() => {
         config.get('some.config.param');

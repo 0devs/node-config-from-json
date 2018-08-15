@@ -1,8 +1,12 @@
-var JsonPluginError = require('maf-error').create('JsonPluginError', {
-    INVALID_LOGGER: 'maf-config-from-json: no logger.debug method passed in constructor',
-    NOT_EXISTS: 'maf-config-from-json: %sourcepath% not exists',
-    INVALID_JSON: 'maf-config-from-json: invalid json in %sourcepath%',
-    CANT_READ_SOURCE: 'maf-config-from-json: cant read source = %sourcepath%'
-});
+import Zerror from '@0devs/error';
 
-module.exports = JsonPluginError;
+class JsonPluginError extends Zerror {}
+
+JsonPluginError.CODES = {
+    INVALID_LOGGER: '@0devs/config-from-json: no logger.debug method passed in constructor',
+    NOT_EXISTS: '@0devs/config-from-json: %sourcepath% not exists',
+    INVALID_JSON: '@0devs/config-from-json: invalid json in %sourcepath%',
+    CANT_READ_SOURCE: '@0devs/config-from-json: cant read source = %sourcepath%'
+};
+
+export default JsonPluginError;

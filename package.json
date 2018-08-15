@@ -1,6 +1,6 @@
 {
-  "name": "maf-config-from-json",
-  "version": "0.4.0",
+  "name": "@0devs/config-from-json",
+  "version": "0.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -22,19 +22,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mafjs/config-from-json.git"
+    "url": "git+https://github.com/0devs/node-config-from-json.git"
   },
-  "keywords": [
-    "maf",
-    "maf-config",
-    "plugin"
-  ],
+  "keywords": [],
   "author": "alekzonder <alekzonder@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mafjs/config-from-json/issues"
+    "url": "https://github.com/0devs/node-config-from-json/issues"
   },
-  "homepage": "https://github.com/mafjs/config-from-json#readme",
+  "homepage": "https://github.com/0devs/node-config-from-json#readme",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-plugin-istanbul": "^4.1.5",
@@ -43,12 +39,12 @@
     "eslint": "^4.7.2",
     "in-publish": "^2.0.0",
     "log4js-nested": "^1.0.1",
-    "maf-config": "^1.2.0",
+    "@0devs/config": "0.x",
     "proxyquire": "^1.8.0",
     "tap": "^10.7.2"
   },
   "dependencies": {
-    "maf-error": "^1.2.0"
+    "@0devs/error": "^0.4.0"
   },
   "nyc": {
     "all": true,

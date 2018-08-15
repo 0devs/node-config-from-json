@@ -1,10 +1,10 @@
-var Config = require('maf-config');
+var Config = require('@0devs/config').default;
 
-var jsonPlugin = require('../package/JsonPlugin');
+var jsonPlugin = require('../package/JsonPlugin').default;
 
-var logger = require('log4js-nested').getLogger();
+// var logger = require('log4js-nested').getLogger();
 
-var config = new Config(logger);
+var config = new Config();
 
 config
     .use(jsonPlugin)
@@ -13,9 +13,9 @@ config
     .from(__dirname + '/configs/db.json', 'db')
     .init()
     .then(() => {
-        logger.info(config.isValid());
-        logger.info(config.get('api.test'));
+        console.log(config.isValid());
+        console.log(config.get('api.test'));
     })
     .catch((error) => {
-        logger.error(error);
+        console.log(error);
     });

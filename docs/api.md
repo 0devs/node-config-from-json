@@ -1,4 +1,4 @@
-# maf-config-from-json 0.x API
+# @0devs/config-from-json 0.x API
 
 ## `constructor ([logger])`
 

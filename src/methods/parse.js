@@ -1,6 +1,6 @@
-var JsonPluginError = require('../Error');
+import JsonPluginError from '../Error';
 
-module.exports = function (sourcepath, data) {
+export default function parse (sourcepath, data) {
 
     return new Promise((resolve, reject) => {
         try {
@@ -11,13 +11,15 @@ module.exports = function (sourcepath, data) {
         } catch (error) {
 
             return reject(
-                JsonPluginError.createError(JsonPluginError.CODES.INVALID_JSON, error)
-                    .bind({
+                new JsonPluginError({
+                    code: JsonPluginError.CODES.INVALID_JSON,
+                    message: '@0devs/config-from-json: invalid json in %sourcepath%',
+                    data: {
                         sourcepath: sourcepath
-                    })
+                    },
+                })
             );
 
         }
     });
-
-};
+}
